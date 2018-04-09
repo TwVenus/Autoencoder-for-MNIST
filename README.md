@@ -3,7 +3,8 @@
 　
 #### 一、概述
 ```
-本程式為使用python語法。使用Auto Encoder決定Deep neural network的weight數值，當各層MSE小於0.01收斂；最後做BPNN，直到正確大於98即收斂。(學習函數為：Sigmoid，調整權重方法為：BPNN，使用mini batch)
+本程式為使用python語法。使用Auto Encoder決定Deep neural network的weight數值，當各層MSE小於0.01收斂；
+最後做BPNN，直到正確大於98即收斂。(學習函數為：Sigmoid，調整權重方法為：BPNN，使用mini batch)
 ```
 
 #### 二、資料集：
