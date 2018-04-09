@@ -20,8 +20,7 @@
 ![HP_table](https://i.imgur.com/iiCIUlX.jpg)
 
 #### 五、程式概述 
-###### 1. Read file
-　
+##### 1. Read file
 ```
 class Readfile(object):
     def __init__(self):
@@ -29,8 +28,7 @@ class Readfile(object):
         self.feature_list = np.array([X_train_image[i].reshape(-1) for i in range(0, X_train_image.shape[0])])
 ```
 
-###### 2. Definite of network architecture
-　
+##### 2. Definite of network architecture
 ```
  # weight
         self.weight_list_h = [np.random.uniform(-1.0, 1.0, size=(self.input_node, self.hidden_later1_node)),
@@ -55,8 +53,7 @@ class Readfile(object):
         self.pre_delta_h_bias = 0
 ```
 
-###### 3. Feed_forward stage (learning function: sigmoid)
-　
+##### 3. Feed_forward stage (learning function: sigmoid)
 ```
  def predict(self, mini_x, mini_y, layer_num):
         self.forward(mini_x, layer_num)
@@ -65,8 +62,7 @@ class Readfile(object):
         self.mse = mean_squared_error(self.after_LF_o, mini_y)
 ```
 
-###### 4. Back propagation neural network
-　
+##### 4. Back propagation neural network
 ```
  def backend(self, mini_x, mini_y, layer_num):
         E = (mini_y - self.after_LF_o)
@@ -84,8 +80,7 @@ class Readfile(object):
         self.pre_delta_h_bias = self.learning_rate * delta_h.sum()
 ```
 
-###### 5. Train step
-　
+##### 5. Train step
 ```
 def train(self):
         self.after_sigmoid_list = []
